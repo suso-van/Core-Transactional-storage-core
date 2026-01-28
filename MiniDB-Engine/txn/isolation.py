@@ -1,0 +1,9 @@
+from enum import Enum
+
+class IsolationLevel(Enum):
+    READ_UNCOMMITTED = "READ_UNCOMMITTED"
+    READ_COMMITTED = "READ_COMMITTED"
+    REPEATABLE_READ = "REPEATABLE_READ"
+    SERIALIZABLE = "SERIALIZABLE"
+    SNAPSHOT = "SNAPSHOT"   
+    

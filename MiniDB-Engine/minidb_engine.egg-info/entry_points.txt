@@ -1,0 +1,2 @@
+[console_scripts]
+minidb = CLI.main:main

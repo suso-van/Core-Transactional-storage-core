@@ -1,0 +1,17 @@
+system:
+  name: MiniDB-Engine
+  environment: dev
+
+storage:
+  data_path: data/minidb.data
+  page_size: 4096
+
+wal:
+  wal_path: data/minidb.wal
+
+logging:
+  level: INFO
+  file: logs/minidb.log
+
+index:
+  order: 4

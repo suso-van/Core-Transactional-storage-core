@@ -1,0 +1,46 @@
+{"lsn": 1, "txid": 1, "type": "BEGIN", "payload": {}, "timestamp": 1769540819.705971}
+{"lsn": 2, "txid": 1, "type": "WRITE", "payload": {"page": 0, "offset": 0, "data": "HELLO"}, "timestamp": 1769540819.70609}
+{"lsn": 3, "txid": 1, "type": "COMMIT", "payload": {}, "timestamp": 1769540819.7062771}
+{"lsn": 4, "txid": "33bc822f-7a13-4fd8-bdaa-b04780b56417", "type": "BEGIN", "payload": {}, "timestamp": 1769540819.7083251}
+{"lsn": 5, "txid": "33bc822f-7a13-4fd8-bdaa-b04780b56417", "type": "WRITE", "payload": {"page_id": 1, "offset": 0, "old": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000", "new": "BANK_TXN_COMMIT"}, "timestamp": 1769540819.708392}
+{"lsn": 6, "txid": "33bc822f-7a13-4fd8-bdaa-b04780b56417", "type": "COMMIT", "payload": {}, "timestamp": 1769540819.708533}
+{"lsn": 7, "txid": "bc4416d9-28fd-40b0-b9f8-74b022094eb9", "type": "BEGIN", "payload": {}, "timestamp": 1769540819.708705}
+{"lsn": 8, "txid": "bc4416d9-28fd-40b0-b9f8-74b022094eb9", "type": "WRITE", "payload": {"page_id": 1, "offset": 0, "old": "BANK_TXN_COMMI", "new": "BANK_TXN_ABORT"}, "timestamp": 1769540819.7087739}
+{"lsn": 9, "txid": "bc4416d9-28fd-40b0-b9f8-74b022094eb9", "type": "ABORT", "payload": {}, "timestamp": 1769540819.7089632}
+{"lsn": 10, "txid": "IDX-TX-1", "type": "WRITE", "payload": {"index_op": "INSERT", "key": 1001, "value": "ACCOUNT_A"}, "timestamp": 1769540819.7111292}
+{"lsn": 11, "txid": "IDX-TX-1", "type": "WRITE", "payload": {"index_op": "INSERT", "key": 1002, "value": "ACCOUNT_B"}, "timestamp": 1769540819.711227}
+{"lsn": 12, "txid": "IDX-TX-1", "type": "WRITE", "payload": {"index_op": "INSERT", "key": 1003, "value": "ACCOUNT_C"}, "timestamp": 1769540819.711288}
+{"lsn": 13, "txid": "32eaeaf4-e538-4fe2-9748-b3938682e955", "type": "BEGIN", "payload": {}, "timestamp": 1769540819.7123892}
+{"lsn": 14, "txid": "32eaeaf4-e538-4fe2-9748-b3938682e955", "type": "WRITE", "payload": {"page_id": 2, "offset": 0, "old": "\u0000\u0000\u0000\u0000\u0000", "new": "Alice"}, "timestamp": 1769540819.712567}
+{"lsn": 15, "txid": "32eaeaf4-e538-4fe2-9748-b3938682e955", "type": "WRITE", "payload": {"index_op": "INSERT", "key": 1, "value": 2}, "timestamp": 1769540819.712626}
+{"lsn": 16, "txid": "32eaeaf4-e538-4fe2-9748-b3938682e955", "type": "WRITE", "payload": {"page_id": 3, "offset": 0, "old": "\u0000\u0000\u0000", "new": "Bob"}, "timestamp": 1769540819.713023}
+{"lsn": 17, "txid": "32eaeaf4-e538-4fe2-9748-b3938682e955", "type": "WRITE", "payload": {"index_op": "INSERT", "key": 2, "value": 3}, "timestamp": 1769540819.713103}
+{"lsn": 18, "txid": "32eaeaf4-e538-4fe2-9748-b3938682e955", "type": "WRITE", "payload": {"page_id": 4, "offset": 0, "old": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000", "new": "Charlie"}, "timestamp": 1769540819.713347}
+{"lsn": 19, "txid": "32eaeaf4-e538-4fe2-9748-b3938682e955", "type": "WRITE", "payload": {"index_op": "INSERT", "key": 3, "value": 4}, "timestamp": 1769540819.713474}
+{"lsn": 20, "txid": "32eaeaf4-e538-4fe2-9748-b3938682e955", "type": "COMMIT", "payload": {}, "timestamp": 1769540819.714004}
+{"lsn": 21, "txid": "7b99bbd0-4155-4589-ba83-da659059f3d0", "type": "BEGIN", "payload": {}, "timestamp": 1769540819.714255}
+{"lsn": 22, "txid": "7b99bbd0-4155-4589-ba83-da659059f3d0", "type": "COMMIT", "payload": {}, "timestamp": 1769540819.7149398}
+{"lsn": 23, "txid": "7b99bbd0-4155-4589-ba83-da659059f3d0", "type": "COMMIT", "payload": {}, "timestamp": 1769540819.715043}
+{"lsn": 24, "txid": 1, "type": "BEGIN", "payload": {}, "timestamp": 1769587245.021627}
+{"lsn": 25, "txid": 1, "type": "WRITE", "payload": {"page": 0, "offset": 0, "data": "HELLO"}, "timestamp": 1769587245.021696}
+{"lsn": 26, "txid": 1, "type": "COMMIT", "payload": {}, "timestamp": 1769587245.021754}
+{"lsn": 27, "txid": "e74827ba-1e26-4837-9ff7-f044b7b7148e", "type": "BEGIN", "payload": {}, "timestamp": 1769587245.023843}
+{"lsn": 28, "txid": "e74827ba-1e26-4837-9ff7-f044b7b7148e", "type": "WRITE", "payload": {"page_id": 6, "offset": 0, "old": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000", "new": "BANK_TXN_COMMIT"}, "timestamp": 1769587245.023909}
+{"lsn": 29, "txid": "e74827ba-1e26-4837-9ff7-f044b7b7148e", "type": "COMMIT", "payload": {}, "timestamp": 1769587245.0240378}
+{"lsn": 30, "txid": "a12d8f89-1e9b-4c16-95d9-227f025b119e", "type": "BEGIN", "payload": {}, "timestamp": 1769587245.024138}
+{"lsn": 31, "txid": "a12d8f89-1e9b-4c16-95d9-227f025b119e", "type": "WRITE", "payload": {"page_id": 6, "offset": 0, "old": "BANK_TXN_COMMI", "new": "BANK_TXN_ABORT"}, "timestamp": 1769587245.02419}
+{"lsn": 32, "txid": "a12d8f89-1e9b-4c16-95d9-227f025b119e", "type": "ABORT", "payload": {}, "timestamp": 1769587245.024298}
+{"lsn": 33, "txid": "IDX-TX-1", "type": "WRITE", "payload": {"index_op": "INSERT", "key": 1001, "value": "ACCOUNT_A"}, "timestamp": 1769587245.025525}
+{"lsn": 34, "txid": "IDX-TX-1", "type": "WRITE", "payload": {"index_op": "INSERT", "key": 1002, "value": "ACCOUNT_B"}, "timestamp": 1769587245.025672}
+{"lsn": 35, "txid": "IDX-TX-1", "type": "WRITE", "payload": {"index_op": "INSERT", "key": 1003, "value": "ACCOUNT_C"}, "timestamp": 1769587245.025724}
+{"lsn": 36, "txid": "507f16e0-3649-4115-b153-d25f6772620e", "type": "BEGIN", "payload": {}, "timestamp": 1769587245.0272489}
+{"lsn": 37, "txid": "507f16e0-3649-4115-b153-d25f6772620e", "type": "WRITE", "payload": {"page_id": 7, "offset": 0, "old": "\u0000\u0000\u0000\u0000\u0000", "new": "Alice"}, "timestamp": 1769587245.0276291}
+{"lsn": 38, "txid": "507f16e0-3649-4115-b153-d25f6772620e", "type": "WRITE", "payload": {"index_op": "INSERT", "key": 1, "value": 7}, "timestamp": 1769587245.02771}
+{"lsn": 39, "txid": "507f16e0-3649-4115-b153-d25f6772620e", "type": "WRITE", "payload": {"page_id": 8, "offset": 0, "old": "\u0000\u0000\u0000", "new": "Bob"}, "timestamp": 1769587245.028086}
+{"lsn": 40, "txid": "507f16e0-3649-4115-b153-d25f6772620e", "type": "WRITE", "payload": {"index_op": "INSERT", "key": 2, "value": 8}, "timestamp": 1769587245.028249}
+{"lsn": 41, "txid": "507f16e0-3649-4115-b153-d25f6772620e", "type": "WRITE", "payload": {"page_id": 9, "offset": 0, "old": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000", "new": "Charlie"}, "timestamp": 1769587245.028467}
+{"lsn": 42, "txid": "507f16e0-3649-4115-b153-d25f6772620e", "type": "WRITE", "payload": {"index_op": "INSERT", "key": 3, "value": 9}, "timestamp": 1769587245.0285518}
+{"lsn": 43, "txid": "507f16e0-3649-4115-b153-d25f6772620e", "type": "COMMIT", "payload": {}, "timestamp": 1769587245.028758}
+{"lsn": 44, "txid": "6ccab2a4-9313-46ef-8129-eb5267729551", "type": "BEGIN", "payload": {}, "timestamp": 1769587245.028827}
+{"lsn": 45, "txid": "6ccab2a4-9313-46ef-8129-eb5267729551", "type": "COMMIT", "payload": {}, "timestamp": 1769587245.029155}
+{"lsn": 46, "txid": "6ccab2a4-9313-46ef-8129-eb5267729551", "type": "COMMIT", "payload": {}, "timestamp": 1769587245.029212}
