@@ -39,3 +39,6 @@ htmlcov/
 
 # Swap files
 *.swp
+
+# Pytest
+.pytest_cache/
