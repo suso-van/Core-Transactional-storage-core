@@ -113,3 +113,29 @@
 {"lsn": 113, "txid": "8388fb42-b499-4d31-8d95-11f4a0f21f84", "type": "BEGIN", "payload": {}, "timestamp": 1769698231.046904}
 {"lsn": 114, "txid": "8388fb42-b499-4d31-8d95-11f4a0f21f84", "type": "COMMIT", "payload": {}, "timestamp": 1769698231.047481}
 {"lsn": 115, "txid": "8388fb42-b499-4d31-8d95-11f4a0f21f84", "type": "COMMIT", "payload": {}, "timestamp": 1769698231.0475872}
+{"txid": 1, "type": "BEGIN", "data": null}
+{"txid": 1, "type": "WRITE", "data": {"page": 0, "offset": 0, "data": "HELLO"}}
+{"txid": 1, "type": "COMMIT", "data": null}
+{"txid": 1, "type": "BEGIN", "lsn": 119, "data": null}
+{"txid": 1, "type": "WRITE", "lsn": 120, "data": {"page": 0, "offset": 0, "data": "HELLO"}}
+{"txid": 1, "type": "COMMIT", "lsn": 121, "data": null}
+{"txid": "5297932a-e0cb-4579-b63e-24c64a7dca6a", "type": "BEGIN", "lsn": 122, "data": null}
+{"txid": "5297932a-e0cb-4579-b63e-24c64a7dca6a", "type": "WRITE", "lsn": 123, "data": {"page_id": 27, "offset": 0, "old": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000", "new": "BANK_TXN_COMMIT"}}
+{"txid": "5297932a-e0cb-4579-b63e-24c64a7dca6a", "type": "COMMIT", "lsn": 124, "data": null}
+{"txid": "61276f55-b05b-4bf5-a1e3-a2f0176e5cc6", "type": "BEGIN", "lsn": 125, "data": null}
+{"txid": "61276f55-b05b-4bf5-a1e3-a2f0176e5cc6", "type": "WRITE", "lsn": 126, "data": {"page_id": 27, "offset": 0, "old": "BANK_TXN_COMMI", "new": "BANK_TXN_ABORT"}}
+{"txid": "61276f55-b05b-4bf5-a1e3-a2f0176e5cc6", "type": "ABORT", "lsn": 127, "data": null}
+{"txid": "IDX-TX-1", "type": "WRITE", "lsn": 128, "data": {"index_op": "INSERT", "key": 1001, "value": "ACCOUNT_A"}}
+{"txid": "IDX-TX-1", "type": "WRITE", "lsn": 129, "data": {"index_op": "INSERT", "key": 1002, "value": "ACCOUNT_B"}}
+{"txid": "IDX-TX-1", "type": "WRITE", "lsn": 130, "data": {"index_op": "INSERT", "key": 1003, "value": "ACCOUNT_C"}}
+{"txid": "0c7817f9-3f08-47f2-a3f2-bb3643a8999c", "type": "BEGIN", "lsn": 131, "data": null}
+{"txid": "0c7817f9-3f08-47f2-a3f2-bb3643a8999c", "type": "WRITE", "lsn": 132, "data": {"page_id": 28, "offset": 0, "old": "\u0000\u0000\u0000\u0000\u0000", "new": "Alice"}}
+{"txid": "0c7817f9-3f08-47f2-a3f2-bb3643a8999c", "type": "WRITE", "lsn": 133, "data": {"index_op": "INSERT", "key": 1, "value": 28}}
+{"txid": "0c7817f9-3f08-47f2-a3f2-bb3643a8999c", "type": "WRITE", "lsn": 134, "data": {"page_id": 29, "offset": 0, "old": "\u0000\u0000\u0000", "new": "Bob"}}
+{"txid": "0c7817f9-3f08-47f2-a3f2-bb3643a8999c", "type": "WRITE", "lsn": 135, "data": {"index_op": "INSERT", "key": 2, "value": 29}}
+{"txid": "0c7817f9-3f08-47f2-a3f2-bb3643a8999c", "type": "WRITE", "lsn": 136, "data": {"page_id": 30, "offset": 0, "old": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000", "new": "Charlie"}}
+{"txid": "0c7817f9-3f08-47f2-a3f2-bb3643a8999c", "type": "WRITE", "lsn": 137, "data": {"index_op": "INSERT", "key": 3, "value": 30}}
+{"txid": "0c7817f9-3f08-47f2-a3f2-bb3643a8999c", "type": "COMMIT", "lsn": 138, "data": null}
+{"txid": "76fc09b4-dffe-4054-b3ec-33a92901d360", "type": "BEGIN", "lsn": 139, "data": null}
+{"txid": "76fc09b4-dffe-4054-b3ec-33a92901d360", "type": "COMMIT", "lsn": 140, "data": null}
+{"txid": "76fc09b4-dffe-4054-b3ec-33a92901d360", "type": "COMMIT", "lsn": 141, "data": null}

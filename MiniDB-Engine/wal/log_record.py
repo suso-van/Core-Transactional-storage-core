@@ -27,13 +27,12 @@ class LogRecord:
         }) + "\n"
 
     @staticmethod
-    def deserialize(line):
+    def deserialize(line: str):
         data = json.loads(line)
-        rec = LogRecord(
-            data["lsn"],
-            data["txid"],
-            LogType(data["type"]),
-            data["payload"]
+
+        return LogRecord(
+            data.get("txid"),
+            LogType(data.get("type")),
+            data.get("data"),
+            data.get("lsn", -1)   # default if missing
         )
-        rec.timestamp = data["timestamp"]
-        return rec
