@@ -1,27 +1,41 @@
 import os
-from wal.log_record import LogRecord, LogType
+import json
+from wal.log_record import LogType
+
 
 class WALManager:
-    def __init__(self, wal_path="data/minidb.wal"):
-        self.wal_path = wal_path
-        open(self.wal_path, "ab").close()
-        self.next_lsn = self._load_last_lsn()
+    def __init__(self, log_file):
+        self.log_file = log_file
 
-    def _load_last_lsn(self):
-        lsn = 0
-        with open(self.wal_path, "r") as f:
+        # Ensure WAL file exists
+        os.makedirs(os.path.dirname(log_file), exist_ok=True)
+        if not os.path.exists(log_file):
+            open(log_file, "w").close()
+
+    def append(self, txid, log_type, data=None):
+        record = {
+            "txid": txid,
+            "type": log_type.value if hasattr(log_type, "value") else log_type,
+            "data": data
+        }
+
+        with open(self.log_file, "a") as f:
+            f.write(json.dumps(record) + "\n")
+
+        return record
+
+    def raw_append(self, record: dict):
+        with open(self.log_file, "a") as f:
+            f.write(json.dumps(record) + "\n")
+
+    def read_all(self):
+        records = []
+        if not os.path.exists(self.log_file):
+            return records
+
+        with open(self.log_file, "r") as f:
             for line in f:
-                rec = LogRecord.deserialize(line)
-                lsn = rec.lsn
-        return lsn + 1
+                if line.strip():
+                    records.append(json.loads(line.strip()))
 
-    def append(self, txid, log_type, payload=None):
-        rec = LogRecord(self.next_lsn, txid, log_type, payload)
-        self.next_lsn += 1
-
-        with open(self.wal_path, "a") as f:
-            f.write(rec.serialize())
-            f.flush()
-            os.fsync(f.fileno())   # durability
-
-        return rec.lsn
+        return records
