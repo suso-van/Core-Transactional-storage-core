@@ -1,0 +1,14 @@
+system:
+  name: MiniDB-Engine
+  environment: prod
+  debug: false
+
+storage:
+  data_path: /var/lib/minidb/data.db
+
+wal:
+  wal_path: /var/lib/minidb/wal.log
+
+logging:
+  level: INFO
+  file: /var/log/minidb/minidb.log

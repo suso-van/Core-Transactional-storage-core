@@ -1,5 +1,6 @@
 CLI
 core
+distributed
 index
 observability
 query

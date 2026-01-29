@@ -1,0 +1,41 @@
+# Environment
+venv/
+.env
+
+# Bytecode / cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyc
+
+# Editor
+.DS_Store
+.vscode/
+.idea/
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Project outputs
+minidb_engine.egg-info/
+*.log
+*.db
+*.wal
+
+# Config secrets
+config/secrets.yaml
+
+# Data and logs - ignore all except .gitkeep
+data/*
+!data/.gitkeep
+logs/*
+!logs/.gitkeep
+
+# Coverage
+.coverage
+htmlcov/
+
+# Swap files
+*.swp

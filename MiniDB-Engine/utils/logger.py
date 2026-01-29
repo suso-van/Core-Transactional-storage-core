@@ -1,7 +1,9 @@
 import logging
 import json
 import uuid
+import os
 from logging.handlers import RotatingFileHandler
+
 
 class JSONFormatter(logging.Formatter):
     def format(self, record):
@@ -19,6 +21,7 @@ class JSONFormatter(logging.Formatter):
 
         return json.dumps(log_record)
 
+
 def setup_logger(
     name="minidb",
     log_file="logs/minidb.log",
@@ -31,10 +34,13 @@ def setup_logger(
     if logger.handlers:
         return logger
 
+    # Ensure log directory exists
+    os.makedirs(os.path.dirname(log_file), exist_ok=True)
+
     # File handler (rotating)
     file_handler = RotatingFileHandler(
         log_file,
-        maxBytes=5 * 1024 * 1024,  # 5MB
+        maxBytes=5 * 1024 * 1024,
         backupCount=5
     )
 
@@ -54,6 +60,7 @@ def setup_logger(
     logger.addHandler(console_handler)
 
     return logger
+
 
 def new_trace_id():
     return str(uuid.uuid4())

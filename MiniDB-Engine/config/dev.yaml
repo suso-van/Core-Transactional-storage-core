@@ -1,0 +1,14 @@
+system:
+  name: MiniDB-Engine
+  environment: dev
+  debug: true
+
+storage:
+  data_path: data/minidb-dev.data
+
+wal:
+  wal_path: data/minidb-dev.wal
+
+logging:
+  level: DEBUG
+  file: logs/minidb-dev.log
