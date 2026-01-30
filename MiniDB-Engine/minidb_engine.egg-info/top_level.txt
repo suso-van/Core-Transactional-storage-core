@@ -6,7 +6,6 @@ observability
 query
 recovery
 storage
-tests
 txn
 utils
 wal

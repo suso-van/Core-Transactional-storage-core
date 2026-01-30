@@ -60,9 +60,6 @@ storage/file_manager.py
 storage/integrity.py
 storage/metadata.py
 storage/page.py
-tests/__init__.py
-tests/test_hello_world.py
-tests/test_index.py
 tests/test_recovery.py
 tests/test_storage.py
 tests/test_txn.py

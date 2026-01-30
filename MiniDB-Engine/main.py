@@ -1,5 +1,41 @@
-from storage.file_manager import FileManager
+#main.py
+
 import os
+from storage.file_manager import FileManager
+from query.planner import QueryPlanner
+from query.executer import QueryExecutor
+from txn.transaction import Transaction
+from wal.wal import WALManager
+from index.index_manager import IndexManager
+from distributed.research.benchmark import BenchmarkEngine
+from distributed.research.workload import WorkloadGenerator
+from distributed.research.chaos import ChaosEngine
+from distributed.research.metrics import ResearchMetrics
+from distributed.research.simulation import SimulationEngine
+from distributed.research.models import PerformanceModels
+from distributed.visualization.topology import TopologyView
+from distributed.visualization.dashboard import SystemDashboard
+from distributed.visualization.graphs import SystemGraph
+from distributed.visualization.state_view import StateView
+from observability.metrics import GLOBAL_METRICS
+from observability.stats import SystemStats
+from observability.diagonistics import Diagnostics
+from distributed.node import Node
+from distributed.cluster import ClusterManager
+from distributed.shard import ShardManager
+from distributed.router import Router
+from distributed.replication import ReplicationManager
+from distributed.coordinator import Coordinator
+from distributed.consensus import ConsensusEngine
+from distributed.recovery import DistributedRecovery
+from distributed.hardening.quorum import QuorumManager
+from distributed.hardening.consistency import ConsistencyManager, ConsistencyModel
+from distributed.hardening.twopc import TwoPhaseCommit
+from distributed.hardening.safety import SafetyManager
+from distributed.hardening.failure_domains import FailureDomainManager
+from wal.wal import WALManager
+from wal.log_record import LogType
+from wal.recovery import RecoveryEngine
 
 # Ensure data directory exists
 os.makedirs("data", exist_ok=True)
@@ -23,9 +59,6 @@ print("VERSION:", loaded.version)
 print("LSN:", loaded.lsn)
 print("DIRTY:", loaded.dirty)
 print("TIMESTAMP:", loaded.timestamp)
-from wal.wal import WALManager
-from wal.log_record import LogType
-from wal.recovery import RecoveryEngine
 
 wal = WALManager("data/minidb.wal")
 
@@ -95,13 +128,6 @@ print("SEARCH 1001:", index_mgr.search(1001))
 print("SEARCH 1002:", index_mgr.search(1002))
 print("SEARCH 1003:", index_mgr.search(1003))
 print("SEARCH 9999 (NOT FOUND):", index_mgr.search(9999))
-from query.planner import QueryPlanner
-from query.executer import QueryExecutor
-from txn.transaction import Transaction
-from wal.wal import WALManager
-from index.index_manager import IndexManager
-from storage.file_manager import FileManager
-import os
 
 os.makedirs("data", exist_ok=True)
 
@@ -145,9 +171,6 @@ for level in IsolationLevel:
     
 # Added SNAPSHOT isolation level
 print("SNAPSHOT :", IsolationLevel.SNAPSHOT.value)
-from observability.metrics import GLOBAL_METRICS
-from observability.stats import SystemStats
-from observability.diagonistics import Diagnostics
 
 print("\n=== OBSERVABILITY TEST ===")
 
@@ -173,15 +196,6 @@ print("Index size:", stats.index_size(index_mgr))
 # Diagnostics
 print("\nSYSTEM HEALTH:")
 print(diag.health_check())
-
-from distributed.node import Node
-from distributed.cluster import ClusterManager
-from distributed.shard import ShardManager
-from distributed.router import Router
-from distributed.replication import ReplicationManager
-from distributed.coordinator import Coordinator
-from distributed.consensus import ConsensusEngine
-from distributed.recovery import DistributedRecovery
 
 print("\n=== DISTRIBUTED SYSTEM TEST ===")
 
@@ -229,12 +243,6 @@ print("Replica sets:", replication.replica_sets)
 result = coord.coordinate_write("user1", "BALANCE_UPDATE")
 print("\nDISTRIBUTED TX:", result)
 
-from distributed.hardening.quorum import QuorumManager
-from distributed.hardening.consistency import ConsistencyManager, ConsistencyModel
-from distributed.hardening.twopc import TwoPhaseCommit
-from distributed.hardening.safety import SafetyManager
-from distributed.hardening.failure_domains import FailureDomainManager
-
 print("\n=== HARDENING LAYER TEST ===")
 
 # Quorum
@@ -264,10 +272,6 @@ fd.assign_domain("n2", "dc2")
 fd.assign_domain("n3", "dc1")
 
 print("Multi-domain replication valid:", fd.validate_replication(["n1", "n2"]))
-from distributed.visualization.topology import TopologyView
-from distributed.visualization.dashboard import SystemDashboard
-from distributed.visualization.graphs import SystemGraph
-from distributed.visualization.state_view import StateView
 
 print("\n=== VISUALIZATION LAYER TEST ===")
 
@@ -279,12 +283,6 @@ state_view = StateView(cluster, shard_mgr, replication)
 dashboard.display()
 graph.display()
 state_view.display()
-from distributed.research.benchmark import BenchmarkEngine
-from distributed.research.workload import WorkloadGenerator
-from distributed.research.chaos import ChaosEngine
-from distributed.research.metrics import ResearchMetrics
-from distributed.research.simulation import SimulationEngine
-from distributed.research.models import PerformanceModels
 
 print("\n=== RESEARCH LAYER TEST ===")
 
